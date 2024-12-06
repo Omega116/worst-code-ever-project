@@ -1,0 +1,345 @@
+:root {
+    --main-color: #dc3545; /* Bootstrap danger red 🤣 */
+    --smiley-color: #721c24; /* Dark maroon for error state 🤣 */
+}
+/* General Funny Theme Styling 🤣 */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #2c2c54; /* Darker text for readability 🤣 */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden; /* Hide horizontal overflow for a cleaner effect 🤣 */
+}
+
+@keyframes errorGradient {
+    0% {
+        background-position: 0% 50%;
+        filter: brightness(100%);
+    }
+    25% {
+        background-position: 50% 100%;
+        filter: brightness(90%);
+    }
+    50% {
+        background-position: 100% 50%;
+        filter: brightness(80%);
+    }
+    75% {
+        background-position: 50% 0%;
+        filter: brightness(90%);
+    }
+    100% {
+        background-position: 0% 50%;
+        filter: brightness(100%);
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #FF6B6B;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 2.5em;
+    animation: wiggle 2s infinite ease-in-out; /* Funny wiggle animation 🤣 */
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #2c3a47;
+}
+
+/* Code Viewer Styling 🤣 */
+#error-display {
+    background-color: #2b2b2b;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    height:9rem;
+    margin: 12px 0;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+    border: 3px solid grey; /* Comically dashed border 🤣 */
+}
+
+/* VS Code-inspired Code Block Styling 🤣 */
+.error-box {
+    background-color: #2C2C2C; /* Slightly lighter grey background 🤣 */
+    color: #D4D4D4; /* Light gray text 🤣 */
+    font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #007ACC; /* VS Code accent color 🤣 */
+    text-align: left; /* Ensure left alignment 🤣 */
+    border: 1px solid #3C3C3C; /* Solid border in a dark grey 🤣 */
+}
+
+.error-code {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+/* Syntax Highlighting Inspired by VS Code Dark+ Theme 🤣 */
+.error-code .keyword {
+    color: #569CD6; /* Blue for keywords 🤣 */
+}
+
+.error-code .string {
+    color: #CE9178; /* Soft orange for strings 🤣 */
+}
+
+.error-code .number {
+    color: #B5CEA8; /* Soft green for numbers 🤣 */
+}
+
+.error-code .function-name {
+    color: #DCDCAA; /* Yellowish for function names 🤣 */
+}
+
+/* Comment Box Styling 🤣 */
+.error-comment {
+    font-size: 1rem;
+    color: #000000; /* Subtle gray for comments 🤣 */
+    text-align: left;
+}
+
+.error-comment-box {
+    background-color: rgb(236, 157, 157);
+    border-radius: 10px;
+    padding: 15px;
+    margin:  0;
+    font-family: "Comic Mono", "Fira Code", monospace;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--main-color);
+}
+
+/* Button Styling 🤣 */
+#generate-btn {
+    background: linear-gradient(45deg, red,rgb(201, 41, 41), red);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(58, 31, 31, 0.1);
+}
+
+#generate-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Smiley Animation Styling 🤣 */
+@keyframes smileyPop {
+    0% {
+        transform: translateY(100px) scale(0); /* Starts from the bottom and small 🤣 */
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-30px) scale(1.5); /* Moves up with a pop 🤣 */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(0); /* Finishes above and disappears 🤣 */
+        opacity: 0;
+    }
+}
+
+.smiley {
+    position: fixed;
+    bottom: 0;
+    font-size: 2rem;
+    color: var(--smiley-color);
+    animation: smileyPop 2s ease-in-out infinite;
+    z-index: 999; /* Keeps it on top of everything 🤣 */
+}
+
+/* Randomize the starting position of the smiley 🤣 */
+.smiley:nth-child(odd) {
+    left: calc(20% + (60% * Math.random()));
+}
+
+.smiley:nth-child(even) {
+    left: calc(30% + (40% * Math.random()));
+}
+
+/* Add multiple smileys with delays 🤣 */
+.smiley:nth-child(3) {
+    animation-delay: 1s;
+}
+.smiley:nth-child(4) {
+    animation-delay: 2s;
+}
+.smiley:nth-child(5) {
+    animation-delay: 1.5s;
+}
+
+.smiley-container {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    pointer-events: none; /* Prevents interfering with clicks 🤣 */
+}
+
+.story-emoji {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    user-select: none;
+    will-change: transform, opacity;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.story-heart {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    user-select: none;
+    will-change: transform, opacity;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+#binaryBackground {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    filter: hue-rotate(120deg) brightness(0.8) contrast(1.2);
+    opacity: 0.8;
+}
+
+body {
+    background: transparent;
+}
+
+.error-info {
+    margin: 20px auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border-left: 5px solid var(--main-color);
+}
+
+.error-description {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.error-tip {
+    font-size: 0.95em;
+    color: #666;
+    font-style: italic;
+    border-top: 1px dashed #ddd;
+    padding-top: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px 15px;
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .error-info {
+        margin: 15px auto;
+        padding: 12px;
+    }
+
+    .error-description {
+        font-size: 1em;
+    }
+
+    .error-tip {
+        font-size: 0.9em;
+    }
+
+    #error-display {
+        height: auto;
+        min-height: 7rem;
+        padding: 15px;
+    }
+
+    #generate-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        margin: 10px;
+        padding: 15px 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .error-info {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .error-description {
+        font-size: 0.95em;
+    }
+
+    .error-tip {
+        font-size: 0.85em;
+    }
+
+    #error-display {
+        height: auto;
+        min-height: 6rem;
+        padding: 12px;
+        font-size: 0.9em;
+    }
+
+    #generate-btn {
+        padding: 10px 20px;
+        font-size: 0.95em;
+        width: 80%;
+        max-width: 250px;
+    }
+}
+
+/* Make sure video background covers screen on all devices */
+#binaryBackground {
+    object-fit: cover;
+}

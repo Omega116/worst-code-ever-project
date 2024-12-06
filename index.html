@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Spaghetti: Error Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay muted loop id="binaryBackground">
+        <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <h1>Welcome to the WORST CODES EVER!</h1>
+        
+        <div class="error-info">
+            <p class="error-description">Here's your randomly generated error. Don't worry, it's not your fault (maybe)!</p>
+            <p class="error-tip"> Pro Tip: Try turning it off and on again... Just kidding! Check the error carefully and enjoy the jokes!.</p>
+        </div>
+
+        <div id="error-display" class="error-box">
+            <pre class="error-code">// Press the button to get an error!</pre>
+        </div>
+        
+        <div id="error-comment-container" class="error-comment-box">
+            <p class="error-comment">// Jokes will appear here! ;p</p>
+        </div>
+        
+        <p>Click the button to generate a random coding disaster and its comic commentary!</p>
+        <button id="generate-btn">Generate Error</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
